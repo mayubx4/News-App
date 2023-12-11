@@ -37,6 +37,7 @@ function useFetch(url: string): [FetchResult, boolean, FetchError] {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true)
         const response = await fetch(url);
 
         if (!response.ok) {
